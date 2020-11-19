@@ -1,0 +1,23 @@
+server:
+  port: 5050
+spring:
+  web:
+    resources:
+      static-locations: classpath:/static/
+      add-mappings: true
+  mvc:
+    static-path-pattern: /static/**
+
+  datasource:
+    url: jdbc:oracle:thin:@localhost:1521:ORCL
+    driver-class-name: oracle.jdbc.driver.OracleDriver
+    username: board
+    password: board
+
+mybatis:
+  type-aliases-package: com.example.domain
+  mapper-locations: classpath:mapper/**/*Mapper.xml
+  configuration:
+    lazy-loading-enabled: true
+    aggressive-lazy-loading: false
+    map-underscore-to-camel-case: true
