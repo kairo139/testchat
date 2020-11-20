@@ -15,6 +15,7 @@ public class ChatController {
     public ChatMessage sendMessage(@Payload ChatMessage chatMessage){
         return chatMessage;
     }
+    //mesagemapping 메시지 보내는 부분
 
     @MessageMapping("chat.addUser")
     @SendTo("/topic/public")
